@@ -23,8 +23,16 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
 
+  const view = {
+    defaultViewEngine: 'nunjucks',
+    mapping: {
+      '.tpl': 'nunjucks',
+      '.jade': 'nunjucks'
+    }
+  }
   return {
     ...config,
     ...userConfig,
+    view
   };
 };
